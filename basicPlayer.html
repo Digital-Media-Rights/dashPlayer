@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Adaptive Streaming in HTML5</title>
+  
+    <!-- DASH-AVC/265 reference implementation -->
+    <script src="js/dash.all.js"></script>
+  
+    <script>
+    // setup the video element and attach it to the Dash player
+    function setupVideo() {
+        var url = "https://s3.amazonaws.com/unscriptedtest/testvideos/featuretest/3.+breadth+of+a+woman_MPEG_DASH_x264_LF_16x9_720p/3.mpd";
+        var context = new Dash.di.DashContext();
+        var player = new MediaPlayer(context);
+            player.startup();
+            player.attachView(document.querySelector("#videoplayer"));
+            player.attachSource(url);
+    }
+    </script>
+  
+    <style>
+    video {
+    width: 80%;
+    height: 80%;
+    }
+    </style> 
+  
+  
+  </head>
+  
+  
+  <body onload="setupVideo()">
+    <h1>Adaptive Streaming with HTML5</h1>
+    <video id="videoplayer" controls></video>
+  </body>
+</html>

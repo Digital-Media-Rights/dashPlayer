@@ -71,7 +71,7 @@ class DashPlayer
       $flashvars = '';
       $width = 652;
       $height = 432;
-      $player = 'dashPlayer.swf';
+      $player = 'dashplayer-master/dashPlayer.swf';
       $playlist = 'default';
       $id = 'dashplayer';
       $schema = 'xml';
@@ -118,11 +118,11 @@ class DashPlayer
    
       if( !$file )
       {
-         if( file_exists( $path . '/cache/' . $playlist . '.xml' ) ) {
-            $file = 'file=' . $url . '/cache/' . $playlist . '.xml';
+         if( file_exists( $path . 'dashplayer-master/cache/' . $playlist . '.xml' ) ) {
+            $file = 'file=' . $url . 'dashplayer-master/cache/' . $playlist . '.xml';
          }
          else {
-            $file = 'file=' . $url . '/getplaylist.php?playlist=' . $playlist;
+            $file = 'file=' . $url . '/dashplayer-master/getplaylist.php?playlist=' . $playlist;
          }
       }
    

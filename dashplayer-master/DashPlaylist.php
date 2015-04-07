@@ -83,7 +83,7 @@ class DashPlaylist
    
    public function clearCache()
    {
-      unlink( getcwd() . '/cache/' . $this->playlist . '.xml' );
+      unlink( getcwd() . 'dashplayer-master/cache/' . $this->playlist . '.xml' );
    }
    
    /**
@@ -126,8 +126,8 @@ class DashPlaylist
       // Initialize some variables.
       $xml = '';
       $path = getcwd();
-      $playlist_dir = $path . '/playlists/' . $this->playlist;   
-      $playlist_file = $path . '/cache/' . $this->playlist . '.xml';
+      $playlist_dir = $path . 'dashplayer-master/playlists/' . $this->playlist;   
+      $playlist_file = $path . 'dashplayer-master/cache/' . $this->playlist . '.xml';
    
       // If there is already a cache file, then we will just want to use it.
       if( $this->cache && file_exists($playlist_file) ) 
